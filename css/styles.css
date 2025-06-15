@@ -1,3 +1,7 @@
+/* цвет текста заголовка #18191d */
+/* временная функция cubic-bezier(0.4, 0, 0.2, 1) */
+/* цвет акцента #ff6b08 */
+
 /* Logo */
 
 .logo {
@@ -7,4 +11,81 @@
 .logo__icon {
   width: 80px;
   height: 30px;
+}
+
+/* Burger */
+
+.burger {
+  position: relative;
+  width: 24px;
+  height: 16px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger.is-open::before {
+  top: 50%;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.is-open::after {
+  top: 50%;
+  bottom: auto;
+
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+
+  background-color: #18191d;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    top 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+
+  background-color: #18191d;
+  transform: translateY(-50%);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger:hover::before,
+.burger:focus::before,
+.burger:hover::after,
+.burger:focus::after,
+.burger:hover .burger__line,
+.burger:focus .burger__line {
+  background-color: #ff6b08;
+}
+
+.burger.is-open .burger__line {
+  opacity: 0;
 }
