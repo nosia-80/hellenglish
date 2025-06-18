@@ -51,6 +51,8 @@
 /* цвет текста заголовка #18191d */
 /* временная функция cubic-bezier(0.4, 0, 0.2, 1) */
 /* цвет акцента #ff6b08 */
+/* основной белый цвет #fff */
+/* цвет ховера кнопки #d35526 */
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -65,6 +67,56 @@ body {
 .logo__icon {
   width: 80px;
   height: 30px;
+}
+
+/* Button */
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  min-width: 240px;
+
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.91;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #18191d;
+
+  background-color: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button--primary {
+  color: #ff6b08;
+
+  background-color: transparent;
+  border-color: #ff6b08;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  color: #fff;
+
+  background-color: #d35526;
+  border-color: #d35526;
+}
+
+.button--secondary {
+  color: #fff;
+  background-color: #ff6b08;
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: #d35526;
 }
 
 /* Burger */
