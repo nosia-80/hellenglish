@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HELLEN</title>
     <link
       rel="stylesheet"
@@ -11,23 +12,48 @@
   </head>
 
   <body>
-    <a class="logo" href="./index.html" aria-label="Логотип школы">
-      <svg class="logo__icon">
-        <use href="./images/icons.svg#icon-logo"></use>
-      </svg>
-    </a>
+    <!-- Шапка сайта -->
+    <header class="page-header">
+      <nav>
+        <a class="logo" href="./index.html" aria-label="Логотип школы">
+          <svg class="logo__icon">
+            <use href="./images/icons.svg#icon-logo"></use>
+          </svg>
+        </a>
 
-    <a class="button button--primary" href="">Консультация по телефону</a>
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <ul class="site-nav list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Программа обучения</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Обо мне</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Варианты обучения</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Контакты</a>
+            </li>
+          </ul>
 
-    <button
-      class="burger"
-      type="button"
-      aria-label="Переключатель мобильного меню"
-      aria-expanded="false"
-      data-burger
-    >
-      <span class="burger__line"></span>
-    </button>
+          <a class="button button--primary" href="">Консультация по телефону</a>
+        </div>
+
+        <a class="button button--primary" href="">Консультация по телефону</a>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Переключатель мобильного меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-burger
+        >
+          <span class="burger__line"></span>
+        </button>
+      </nav>
+    </header>
 
     <script src="./js/mobile-menu.js"></script>
   </body>
