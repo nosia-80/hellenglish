@@ -14,7 +14,7 @@
   <body>
     <!-- Шапка сайта -->
     <header class="page-header">
-      <nav>
+      <nav class="container main-nav">
         <a class="logo" href="./index.html" aria-label="Логотип школы">
           <svg class="logo__icon">
             <use href="./images/icons.svg#icon-logo"></use>
@@ -22,36 +22,44 @@
         </a>
 
         <div class="mobile-menu" id="mobile-menu" data-menu>
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="">Программа обучения</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="">Обо мне</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="">Варианты обучения</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="">Контакты</a>
-            </li>
-          </ul>
+          <div class="mobile-menu__container">
+            <ul class="site-nav list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="">Программа обучения</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="">Обо мне</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="">Варианты обучения</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
 
-          <a class="button button--primary" href="">Консультация по телефону</a>
+            <a class="button button--primary mobile-menu__button" href="">
+              Консультация по телефону
+            </a>
+          </div>
         </div>
 
-        <a class="button button--primary" href="">Консультация по телефону</a>
+        <div class="page-header__actions">
+          <a class="button button--primary page-header__button" href="">
+            Консультация по телефону
+          </a>
 
-        <button
-          class="burger"
-          type="button"
-          aria-label="Переключатель мобильного меню"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          data-burger
-        >
-          <span class="burger__line"></span>
-        </button>
+          <button
+            class="burger"
+            type="button"
+            aria-label="Переключатель мобильного меню"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-burger
+          >
+            <span class="burger__line"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
