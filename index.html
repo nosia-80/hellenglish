@@ -63,6 +63,67 @@
       </nav>
     </header>
 
+    <main>
+      <!-- Герой -->
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Комплексная подготовка к
+              <abbr title="Внешнее независимое оценивание">ВНО</abbr> по
+              английскому языку
+            </h1>
+            <p class="hero__text">
+              <em>Просто не будет.</em><br />
+              <strong class="hero__text--strong">
+                Но ты гарантировано наберешь
+                <span class="accent">+25 баллов</span>
+              </strong>
+            </p>
+            <a class="button button--secondary hero__button" href="">
+              Хочу на бесплатное занятие
+            </a>
+          </div>
+
+          <picture>
+            <source
+              srcset="./images/hero/hero-photo-desktop.webp"
+              media="(min-width: 1280px)"
+              type="image/webp"
+            />
+            <source
+              srcset="./images/hero/hero-photo-desktop.png"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="./images/hero/hero-photo-tablet.webp"
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="./images/hero/hero-photo-tablet.png"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/hero/hero-photo-mobile.webp"
+              media="(max-width: 767px)"
+              type="image/webp"
+            />
+            <source
+              srcset="./images/hero/hero-photo-mobile.png"
+              media="(max-width: 767px)"
+            />
+
+            <img
+              class="hero__photo"
+              src="./images/hero/hero-photo-mobile.png"
+              alt="Елена Морева проверяет знания своих учениц"
+            />
+          </picture>
+        </div>
+      </section>
+    </main>
+
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
