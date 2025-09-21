@@ -110,6 +110,17 @@ img {
   color: var(--accent-color);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Container */
 
 .container {
@@ -288,6 +299,10 @@ img {
 
 .hero {
   padding: 30px 0 50px;
+
+  background-image: url('../images/features/bg-mob.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .hero__title {
@@ -312,6 +327,47 @@ img {
 
 .hero__button {
   width: 250px;
+}
+
+/* Section */
+
+.section {
+  padding: 45px 0 50px;
+}
+
+/* Features */
+
+.features-item {
+  position: relative;
+  padding-left: 70px;
+
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.54;
+  color: var(--title-text-color);
+}
+
+.features-item::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  content: '';
+  width: 58px;
+  height: 58px;
+}
+
+.features-item:nth-child(1)::before {
+  background-image: url('../images/features/icon-mob-1.png');
+}
+
+.features-item:nth-child(2)::before {
+  background-image: url('../images/features/icon-mob-2.png');
+}
+
+.features-item:nth-child(3)::before {
+  background-image: url('../images/features/icon-mob-3.png');
 }
 
 /* Media queries */
@@ -351,6 +407,10 @@ img {
     letter-spacing: 0.02em;
   }
 
+  .hero {
+    background-image: url('../images/features/bg-tab.png');
+  }
+
   .hero__container {
     display: flex;
     justify-content: space-between;
@@ -372,6 +432,19 @@ img {
 
   .hero__button {
     width: 260px;
+  }
+
+  .section {
+    padding-top: 60px;
+  }
+
+  .features-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features-item {
+    width: 200px;
   }
 }
 
@@ -434,6 +507,7 @@ img {
 
   .hero {
     padding-bottom: 60px;
+    background-size: cover;
   }
 
   .hero__content {
@@ -451,6 +525,39 @@ img {
 
     font-size: 18px;
     line-height: 1.27;
+  }
+
+  .section {
+    padding: 70px 0 90px;
+  }
+
+  .features-item {
+    width: 390px;
+    padding-left: 85px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .features-item::before {
+    width: 103px;
+    height: 103px;
+
+    z-index: -1;
+  }
+
+  .features-item:nth-child(1)::before {
+    background-image: url('../images/features/icon-1.png');
+  }
+
+  .features-item:nth-child(2)::before {
+    background-image: url('../images/features/icon-2.png');
+  }
+
+  .features-item:nth-child(3)::before {
+    background-image: url('../images/features/icon-3.png');
   }
 }
 
@@ -529,5 +636,14 @@ img {
 
   .hero__photo {
     margin: 0 auto;
+  }
+
+  .features-list {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .features-item:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
